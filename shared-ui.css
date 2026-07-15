@@ -1,0 +1,229 @@
+.wordmark {
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5em;
+  line-height: 1;
+  text-decoration: none;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.85), 0 0 5px rgba(255, 255, 255, 0.26), 0 0 10px rgba(255, 255, 255, 0.12);
+}
+
+.menu-toggle {
+  position: fixed;
+  top: 25px;
+  right: 22px;
+  z-index: 10;
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  color: rgba(255, 255, 255, 0.82);
+  background: transparent;
+  font: 400 12px/1.2 "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  letter-spacing: 0.02em;
+  transition: color 180ms ease;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus-visible {
+  color: #fff;
+}
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9;
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 500ms ease, visibility 0s linear 500ms;
+}
+
+.menu-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition-delay: 0s;
+}
+
+.menu-dialog {
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  box-sizing: border-box;
+  width: min(512px, calc(100vw - 48px));
+  color: rgba(255, 255, 255, 0.82);
+  font: 400 12px/1.2 "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  transform: translate(-50%, calc(-50% + 8px));
+  transition: transform 500ms ease;
+}
+
+.menu-overlay.is-open .menu-dialog {
+  transform: translate(-50%, -50%);
+}
+
+.menu-close {
+  display: block;
+  box-sizing: border-box;
+  margin: 0 0 9px auto;
+  padding: 0;
+  border: 0;
+  color: rgba(255, 255, 255, 0.72);
+  background: transparent;
+  font: inherit;
+}
+
+.menu-panel {
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: rgba(15, 17, 21, 0.72);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.45);
+}
+
+.menu-search-row {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  box-sizing: content-box;
+  min-height: 42px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.menu-search-icon {
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.menu-search {
+  min-width: 0;
+  box-sizing: border-box;
+  border: 0;
+  outline: 0;
+  color: rgba(255, 255, 255, 0.84);
+  background: transparent;
+  font: inherit;
+  text-transform: uppercase;
+}
+
+.menu-search::placeholder {
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.menu-list {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 7px 0;
+  list-style: none;
+}
+
+.menu-item {
+  box-sizing: border-box;
+}
+
+.menu-item[hidden] {
+  display: none;
+}
+
+.menu-link {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  box-sizing: border-box;
+  min-height: 29px;
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+  transition: color 150ms ease, background 150ms ease;
+}
+
+.menu-link:hover,
+.menu-link:focus-visible,
+.menu-link[aria-current="page"] {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.055);
+  outline: none;
+}
+
+.menu-number,
+.menu-label {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.menu-number {
+  justify-content: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.55);
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+.menu-link:hover .menu-number,
+.menu-link:focus-visible .menu-number,
+.menu-link[aria-current="page"] .menu-number {
+  color: #b9a1ff;
+}
+
+.menu-label {
+  padding: 0 13px;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  text-transform: uppercase;
+}
+
+.menu-empty {
+  display: none;
+  box-sizing: border-box;
+  padding: 16px 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.menu-empty.is-visible {
+  display: block;
+}
+
+@media (pointer: fine) {
+  html,
+  body,
+  body * {
+    cursor: url("./assets/cursor-def-14.png") 7 7, auto !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .wordmark {
+    max-width: 220px;
+    font-size: 11px;
+    letter-spacing: 0.36em;
+  }
+
+  .menu-toggle {
+    top: 18px;
+    right: 16px;
+  }
+
+  .menu-overlay {
+    padding: 16px;
+  }
+
+  .menu-dialog {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-overlay,
+  .menu-dialog {
+    transition-duration: 0.01ms;
+  }
+}

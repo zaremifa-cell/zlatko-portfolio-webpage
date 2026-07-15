@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Selected work by Zlatko Anastasov — artist, musician and frontend/UI engineer." />
+    <title>Information</title>
+    <link rel="stylesheet" href="./information.css?v=9" />
+    <link rel="stylesheet" href="./shared-ui.css?v=7" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="wordmark" href="./index.html" aria-label="Zlatko Anastasov — home">ZLATKO ANASTASOV</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">[MENU]</button>
+      </header>
+
+      <main>
+        <section class="information-grid" aria-label="Profile information">
+          <article class="bio-block info-block" id="bio">
+            <h1 class="section-label"><span aria-hidden="true">▶</span> BIO</h1>
+            <div class="bio-copy">
+              <p>I’m an artist, musician and frontend/UI engineer focused on expressive interfaces, visual systems and interaction in code.</p>
+              <p>My background in painting and music shapes the way I approach interfaces — through rhythm, contrast, silence, proportion and visual tension.</p>
+              <p>I design directly in code and build with precision, care and a strong attention to detail. I’m passionate about creating digital experiences that feel intentional, coherent and alive.</p>
+            </div>
+          </article>
+
+          <section class="contact-block info-block" aria-labelledby="contact-heading">
+            <h2 class="section-label" id="contact-heading"><span aria-hidden="true">▶</span> CONTACT</h2>
+            <dl class="contact-list">
+              <div>
+                <dt>EMAIL</dt>
+                <dd><a href="mailto:zaremifa@gmail.com">zaremifa@gmail.com</a></dd>
+              </div>
+              <div>
+                <dt>PHONE</dt>
+                <dd><a href="tel:+359885659872">+359 88 565 9872</a></dd>
+              </div>
+              <div>
+                <dt>LOCATION</dt>
+                <dd>Plovdiv, Bulgaria / Remote</dd>
+              </div>
+              <div>
+                <dt>AVAILABILITY</dt>
+                <dd>Open to new opportunities</dd>
+                <dd class="availability-visual" aria-hidden="true">
+                  <img src="./assets/information-opportunities-bg.jpg" alt="" />
+                </dd>
+              </div>
+            </dl>
+          </section>
+
+          <nav class="links-block info-block" aria-labelledby="links-heading">
+            <h2 class="section-label" id="links-heading"><span aria-hidden="true">▶</span> LINKS</h2>
+            <ul class="social-links">
+              <li><a href="https://github.com/zaremifa-cell" target="_blank" rel="noreferrer">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/zlatko-anastasov-5214aa54/" target="_blank" rel="noreferrer">LinkedIn</a></li>
+              <li><a href="https://www.instagram.com/zlatkoanastasovart/" target="_blank" rel="noreferrer">Instagram</a></li>
+            </ul>
+          </nav>
+        </section>
+
+      </main>
+    </div>
+
+    <div class="menu-overlay" id="site-menu" aria-hidden="true">
+      <div class="menu-dialog" role="dialog" aria-modal="true" aria-label="Navigation">
+        <button class="menu-close" type="button" aria-label="Close menu">[ESC]</button>
+        <nav class="menu-panel" aria-label="Main navigation">
+          <label class="menu-search-row">
+            <span class="menu-search-icon" aria-hidden="true">⌕</span>
+            <input class="menu-search" type="search" placeholder="SEARCH..." autocomplete="off" aria-label="Search menu" />
+          </label>
+          <ol class="menu-list">
+            <li class="menu-item" data-menu-label="work">
+              <a class="menu-link" href="./works.html"><span class="menu-number">01</span><span class="menu-label">Work</span></a>
+            </li>
+            <li class="menu-item" data-menu-label="information">
+              <a class="menu-link" href="./information.html" aria-current="page"><span class="menu-number">02</span><span class="menu-label">Information</span></a>
+            </li>
+            <li class="menu-item" data-menu-label="about">
+              <a class="menu-link" href="#bio"><span class="menu-number">03</span><span class="menu-label">About</span></a>
+            </li>
+            <li class="menu-item" data-menu-label="homepage home">
+              <a class="menu-link" href="./index.html"><span class="menu-number">04</span><span class="menu-label">Homepage</span></a>
+            </li>
+          </ol>
+          <div class="menu-empty" role="status">No matching pages.</div>
+        </nav>
+      </div>
+    </div>
+
+    <script src="./information.js?v=5"></script>
+  </body>
+</html>

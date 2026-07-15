@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        font: 400 14px/1.45 "SFMono-Regular", Consolas, "Liberation Mono", "Courier New", monospace;
+        overflow: hidden;
+      }
+
+      canvas {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+
+      #canvas {
+        z-index: 1;
+      }
+
+      #textCanvas {
+        z-index: 2;
+        cursor: grab;
+      }
+
+      #textCanvas:active {
+        cursor: grabbing;
+      }
+
+      #canvas,
+      #textCanvas {
+        transition: filter 500ms ease, opacity 500ms ease;
+      }
+
+      body.menu-open #canvas,
+      body.menu-open #textCanvas {
+        filter: blur(10px);
+        opacity: 0.38;
+      }
+
+      .menu-toggle {
+        position: fixed;
+        top: 20px;
+        right: 22px;
+        z-index: 10;
+        padding: 0;
+        border: 0;
+        color: rgba(255, 255, 255, 0.82);
+        background: transparent;
+        font: 400 12px/1.2 "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+        letter-spacing: 0.02em;
+        cursor: pointer;
+        transition: color 180ms ease;
+      }
+
+      .menu-toggle:hover,
+      .menu-toggle:focus-visible {
+        color: #fff;
+      }
+
+      .menu-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 9;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        box-sizing: border-box;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(7px);
+        -webkit-backdrop-filter: blur(7px);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 500ms ease, visibility 0s linear 500ms;
+      }
+
+      .menu-overlay.is-open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transition-delay: 0s;
+      }
+
+      .menu-dialog {
+        width: min(512px, calc(100vw - 48px));
+        color: rgba(255, 255, 255, 0.82);
+        font: 400 12px/1.2 "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+        transform: translateY(8px);
+        transition: transform 500ms ease;
+      }
+
+      .menu-overlay.is-open .menu-dialog {
+        transform: translateY(0);
+      }
+
+      .menu-close {
+        display: block;
+        margin: 0 0 9px auto;
+        padding: 0;
+        border: 0;
+        color: rgba(255, 255, 255, 0.72);
+        background: transparent;
+        font: inherit;
+        cursor: pointer;
+      }
+
+      .menu-panel {
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.24);
+        background: rgba(15, 17, 21, 0.72);
+        box-shadow: 0 22px 70px rgba(0, 0, 0, 0.45);
+      }
+
+      .menu-search-row {
+        display: grid;
+        grid-template-columns: 42px 1fr;
+        min-height: 42px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+      }
+
+      .menu-search-icon {
+        display: grid;
+        place-items: center;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .menu-search {
+        min-width: 0;
+        border: 0;
+        outline: 0;
+        color: rgba(255, 255, 255, 0.84);
+        background: transparent;
+        font: inherit;
+        text-transform: uppercase;
+      }
+
+      .menu-search::placeholder {
+        color: rgba(255, 255, 255, 0.58);
+      }
+
+      .menu-list {
+        margin: 0;
+        padding: 7px 0;
+        list-style: none;
+      }
+
+      .menu-item[hidden] {
+        display: none;
+      }
+
+      .menu-link {
+        display: grid;
+        grid-template-columns: 42px 1fr;
+        min-height: 29px;
+        color: rgba(255, 255, 255, 0.78);
+        text-decoration: none;
+        transition: color 150ms ease, background 150ms ease;
+      }
+
+      .menu-link:hover,
+      .menu-link:focus-visible {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.055);
+        outline: none;
+      }
+
+      .menu-number,
+      .menu-label {
+        display: flex;
+        align-items: center;
+      }
+
+      .menu-number {
+        justify-content: center;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.55);
+        font-size: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+      }
+
+      .menu-link:hover .menu-number,
+      .menu-link:focus-visible .menu-number {
+        color: #b9a1ff;
+      }
+
+      .menu-label {
+        padding: 0 13px;
+        font-size: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+        text-transform: uppercase;
+      }
+
+      .menu-empty {
+        display: none;
+        padding: 16px 14px;
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      .menu-empty.is-visible {
+        display: block;
+      }
+
+      @media (max-width: 600px) {
+        .menu-toggle {
+          top: 16px;
+          right: 16px;
+        }
+
+        .menu-overlay {
+          padding: 16px;
+        }
+
+        .menu-dialog {
+          width: 100%;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        #canvas,
+        #textCanvas,
+        .menu-overlay,
+        .menu-dialog {
+          transition-duration: 0.01ms;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="./shared-ui.css?v=7" />
+  </head>
+  <body>
+    <canvas id="canvas" aria-label="Генеративен геометричен патърн"></canvas>
+    <canvas id="textCanvas" aria-label="Движещ се текст"></canvas>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">[MENU]</button>
+
+    <div class="menu-overlay" id="site-menu" aria-hidden="true">
+      <div class="menu-dialog" role="dialog" aria-modal="true" aria-label="Навигация">
+        <button class="menu-close" type="button" aria-label="Затвори менюто">[ESC]</button>
+        <nav class="menu-panel" aria-label="Основна навигация">
+          <label class="menu-search-row">
+            <span class="menu-search-icon" aria-hidden="true">⌕</span>
+            <input class="menu-search" type="search" placeholder="SEARCH..." autocomplete="off" aria-label="Търси в менюто" />
+          </label>
+          <ol class="menu-list">
+            <li class="menu-item" data-menu-label="work">
+              <a class="menu-link" href="./works.html"><span class="menu-number">01</span><span class="menu-label">Work</span></a>
+            </li>
+            <li class="menu-item" data-menu-label="information">
+              <a class="menu-link" href="./information.html"><span class="menu-number">02</span><span class="menu-label">Information</span></a>
+            </li>
+            <li class="menu-item" data-menu-label="about">
+              <a class="menu-link" href="./information.html#bio"><span class="menu-number">03</span><span class="menu-label">About</span></a>
+            </li>
+            <li class="menu-item" data-menu-label="homepage home">
+              <a class="menu-link" href="./index.html" aria-current="page"><span class="menu-number">04</span><span class="menu-label">Homepage</span></a>
+            </li>
+          </ol>
+          <div class="menu-empty" role="status">No matching pages.</div>
+        </nav>
+      </div>
+    </div>
+
+    <script src="./index.js?v=2"></script>
+  </body>
+</html>
