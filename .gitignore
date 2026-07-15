@@ -1,0 +1,5 @@
+.vercel
+.env*
+.DS_Store
+.codex/
+.idea/copilot.data.migration.*.xml
