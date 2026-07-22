@@ -115,6 +115,22 @@ body.menu-open .page-shell {
   margin: 0 0 20px;
 }
 
+.resume-download-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  margin-top: 12px;
+  color: inherit;
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.resume-download-link:hover,
+.resume-download-link:focus-visible {
+  text-decoration-thickness: 2px;
+}
+
 .contact-list {
   display: grid;
   gap: 27px;
