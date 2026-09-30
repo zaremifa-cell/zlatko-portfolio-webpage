@@ -3,3 +3,14 @@
 .DS_Store
 .codex/
 .idea/copilot.data.migration.*.xml
+
+# Editor settings and local development output
+.idea/
+.vscode/
+node_modules/
+*.log
+__pycache__/
+*.py[cod]
+
+# Keep an intentionally documented environment template if added later
+!.env.example
