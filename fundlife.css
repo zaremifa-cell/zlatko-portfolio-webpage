@@ -1,0 +1,11 @@
+.fundlife-page { --muted: #a0a0a0; }
+.fundlife-page .project-hero { min-height: auto; padding: 64px 0 48px; }
+.fundlife-page .project-title { font-size: clamp(40px, 5vw, 72px); line-height: 1.1; margin-top: 16px; }
+.fundlife-page .project-nav { flex-wrap: wrap; gap: 16px 24px; }
+.fundlife-page .project-nav a, .fundlife-page .project-cta { min-height: 44px; display: inline-flex; align-items: center; }
+.fundlife-page .project-lead, .fundlife-page .case-content p { max-width: 65ch; font-size: 16px; line-height: 1.6; }
+.fundlife-page .case-content h3 { font-size: 24px; line-height: 1.2; font-weight: 400; margin: 0 0 24px; }
+.fundlife-screen img { max-height: none; object-fit: contain; }
+.fundlife-screen figcaption { padding: 16px var(--pad); color: #a0a0a0; font-size: 12px; }
+.fundlife-page a:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
+@media(max-width:760px) { .fundlife-page .project-hero { gap: 32px; padding-top: 32px; } .fundlife-page .project-meta { gap: 24px 16px; } .fundlife-page .project-footer { flex-wrap: wrap; } .fundlife-page .footer-mark { text-align: left; } }
