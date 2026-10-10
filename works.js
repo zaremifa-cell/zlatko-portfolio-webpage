@@ -22,6 +22,7 @@ const pardonPreviewImages = [
 const projectPreviewImages = {
   ableton: abletonPreviewImages,
   pardon: pardonPreviewImages,
+  fundlife: ['./assets/projects/fundlife-workspace.png'],
 };
 
 let activePreviewEntry = null;

@@ -1,0 +1,13 @@
+/* Allow the additional project to extend the existing page without compressing rows. */
+.works-shell { height: auto; min-height: 100dvh; overflow: visible; }
+.works-shell main { display: block; }
+.works-intro { min-height: 240px; padding-bottom: 32px; }
+.work-entry { min-height: 320px; padding: 32px 0; }
+@media (max-width: 900px) {
+  .works-shell { height: 100dvh; overflow-x: hidden; overflow-y: auto; }
+  .work-entry { min-height: 290px; }
+}
+@media (max-width: 620px) {
+  .work-entry { min-height: 0; padding: 0; }
+  .work-entry[data-preview-project="fundlife"] .work-kind { white-space: normal; flex-wrap: wrap; }
+}
