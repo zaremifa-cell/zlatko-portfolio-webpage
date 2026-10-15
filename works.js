@@ -23,6 +23,8 @@ const projectPreviewImages = {
   ableton: abletonPreviewImages,
   pardon: pardonPreviewImages,
   fundlife: ['./assets/projects/fundlife-workspace.png'],
+  base: ['./assets/projects/base-library-desktop.png'],
+  biodiscovery: ['./assets/projects/biodiscovery-desktop.jpg'],
 };
 
 let activePreviewEntry = null;

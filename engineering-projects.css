@@ -1,0 +1,24 @@
+/* Extend the existing portfolio system for engineering case studies. */
+.engineering-project { --muted: #a0a0a0; }
+.engineering-project .project-hero { min-height: 440px; }
+.engineering-project .project-title { font-size: clamp(28px, 3.2vw, 48px); line-height: 1.15; max-width: 18ch; margin-top: 16px; }
+.engineering-project .project-lead, .engineering-project .case-content p { max-width: 68ch; line-height: 1.6; }
+.engineering-project .case-content h3 { font-size: 20px; font-weight: 400; line-height: 1.4; margin: 0 0 24px; max-width: 42ch; }
+.engineering-screen { margin: 64px 0; background: #f5f5f7; border-radius: 4px; }
+.engineering-screen img { object-fit: contain; height: auto; max-height: none; }
+.engineering-screen figcaption, .engineering-mobile figcaption { padding: 16px 24px; background: #020202; color: #a0a0a0; font-size: 12px; line-height: 1.6; }
+.engineering-mobile { display: grid; justify-items: center; margin: 64px 0; padding-top: 48px; background: #121212; }
+.engineering-mobile img { width: min(390px, calc(100% - 48px)); max-height: none; object-fit: contain; }
+.engineering-mobile figcaption { width: 100%; margin-top: 48px; }
+.engineering-project a:focus-visible, .engineering-project button:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
+@media(max-width:760px) {
+ .engineering-project .project-hero { min-height: 0; padding: 48px 0 32px; }
+ .engineering-project .project-nav { gap: 16px; flex-wrap: wrap; }
+ .engineering-project .project-nav a, .engineering-project .project-cta { display: inline-flex; min-height: 44px; align-items: center; }
+ .engineering-project .project-meta { gap: 24px 16px; }
+ .engineering-project .project-title { font-size: 32px; overflow-wrap: anywhere; }
+ .engineering-project .case-section { gap: 24px; padding: 48px 0; }
+ .engineering-project .project-footer { gap: 24px; flex-wrap: wrap; }
+ .engineering-project .footer-mark { text-align: left; }
+ .engineering-screen { margin: 48px 0; }
+}

@@ -11,3 +11,16 @@
   .work-entry { min-height: 0; padding: 0; }
   .work-entry[data-preview-project="fundlife"] .work-kind { white-space: normal; flex-wrap: wrap; }
 }
+
+/* Keep longer engineering disciplines readable in the existing compact layout. */
+.work-entry[data-preview-project="base"] .work-kind,
+.work-entry[data-preview-project="biodiscovery"] .work-kind { white-space: normal; flex-wrap: wrap; }
+.work-entry[data-preview-project="base"] .work-copy > p:not(.work-kind),
+.work-entry[data-preview-project="biodiscovery"] .work-copy > p:not(.work-kind) { max-width: 72ch; }
+.work-entry a:focus-visible { outline: 2px solid #f2f2f2; outline-offset: 4px; }
+@media (max-width: 620px) {
+  .work-entry[data-preview-project="base"] .work-links a,
+  .work-entry[data-preview-project="biodiscovery"] .work-links a,
+  .work-entry[data-preview-project="base"] .project-link,
+  .work-entry[data-preview-project="biodiscovery"] .project-link { min-height: 44px; align-items: center; }
+}

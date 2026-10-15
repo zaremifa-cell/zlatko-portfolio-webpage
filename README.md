@@ -1,6 +1,6 @@
 # Zlatko Anastasov — Design & Frontend Portfolio
 
-A personal portfolio presenting interface design and frontend implementation through two working case studies: **AbletonR** for the web and **Pardon** for iPhone.
+A personal portfolio presenting interface design and frontend implementation through five projects: **AbletonR**, **Pardon**, **FundLife AI**, **Base AI Visual Library** and **BioDiscovery Workbench**.
 
 **[Visit the portfolio](https://zlatko-anastasov-portfolio.vercel.app)** · [Selected work](https://zlatko-anastasov-portfolio.vercel.app/works.html) · [About & résumé](https://zlatko-anastasov-portfolio.vercel.app/information.html)
 
@@ -16,8 +16,13 @@ The homepage's animated canvas is one part of the portfolio; the site also inclu
 | --- | --- | --- | --- |
 | AbletonR | Independent Ableton redesign concept; UI/UX and Next.js frontend | [Live website](https://ableton-r.vercel.app) · [Case study](https://zlatko-anastasov-portfolio.vercel.app/abletonr.html) | [Repository](https://github.com/zaremifa-cell/AbletonR) |
 | Pardon | Local-first SwiftUI chat interface for iPhone | [TestFlight beta](https://testflight.apple.com/join/bPwm7dY2) · [Case study](https://zlatko-anastasov-portfolio.vercel.app/pardon.html) | [Repository](https://github.com/zaremifa-cell/Pardon) |
+| FundLife AI | Document-review interaction design | [Case study](https://zlatko-anastasov-portfolio.vercel.app/fundlife.html) | Figma prototype linked from case study |
+| Base AI Visual Library | Semantic and visual search; browser-based inference | [Case study](https://zlatko-anastasov-portfolio.vercel.app/base-ai.html) | Time-limited demo invitations |
+| BioDiscovery Workbench | Scientific data integration and controlled AI workflow | [Live explorer](https://biodiscovery-workbench.vercel.app) · [Case study](https://zlatko-anastasov-portfolio.vercel.app/biodiscovery.html) | GPU inference in preparation |
 
 AbletonR is an independent portfolio concept, not an official Ableton product. Pardon is a native beta; installation and AI features depend on device, OS and TestFlight availability. See each project's README for its scope and requirements.
+
+
 
 ## Run locally
 
@@ -37,7 +42,8 @@ Open [localhost:5173](http://localhost:5173). If Node.js and npm are installed, 
 index.html / index.js             Canvas homepage and interaction
 works.html / works.css / works.js Selected projects and previews
 information.html / .css / .js     Background, contact links and résumé
-abletonr.html / pardon.html       Individual project case studies
+abletonr.html / pardon.html       Original product case studies
+fundlife.html / base-ai.html / biodiscovery.html Additional project case studies
 project.css / project.js          Shared case-study styles and behavior
 shared-ui.css                    Shared interface styles
 assets/                          Screenshots, graphics and résumé PDF
@@ -49,7 +55,7 @@ There is no automated test suite configured; the existing `npm test` command is 
 
 1. Open the homepage and try dragging the `zadesign` canvas wordmark.
 2. Open and close the menu, then navigate to Work and Information.
-3. Open both case studies and check their image galleries and external project links.
+3. Open the case studies and check their image galleries and external project links.
 4. Check the résumé PDF from Information.
 5. Repeat navigation at a narrow/mobile viewport and with a keyboard; inspect the browser console for errors.
 
