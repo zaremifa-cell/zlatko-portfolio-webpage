@@ -1,6 +1,6 @@
 # Zlatko Anastasov — Design & Frontend Portfolio
 
-A personal portfolio presenting interface design and frontend implementation through five projects: **AbletonR**, **Pardon**, **FundLife AI**, **Base AI Visual Library** and **BioDiscovery Workbench**.
+A personal portfolio presenting interface design and frontend implementation through six projects: **AbletonR**, **Pardon**, **FundLife AI**, **Base AI Visual Library** **BioDiscovery Workbench** and **TrustPay**.
 
 **[Visit the portfolio](https://zlatko-anastasov-portfolio.vercel.app)** · [Selected work](https://zlatko-anastasov-portfolio.vercel.app/works.html) · [About & résumé](https://zlatko-anastasov-portfolio.vercel.app/information.html)
 
@@ -64,3 +64,7 @@ The deployed site is hosted on Vercel. This repository is a static website, with
 ## Development notes
 
 [AGENTS.md](AGENTS.md) and the [interface design system](Geometric%20and%20Perceptual%20System%20for%20Text-Based%20Interfaces.md) record the project's design constraints. Screenshots and case-study assets are presentation material; they are not evidence of an automated test run.
+
+## TrustPay backend
+
+[Case study](https://zlatko-anastasov-portfolio.vercel.app/trustpay.html) · [Java backend repository](https://github.com/zaremifa-cell/trustpay-backend). Includes identity controls, idempotent payment creation, PostgreSQL ledger, RabbitMQ outbox and tested recovery. Identity verification and payments are simulated; run the complete backend locally with Docker Compose.

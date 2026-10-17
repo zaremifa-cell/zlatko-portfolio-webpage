@@ -1,0 +1,17 @@
+
+.trustpay-label{color:#a0a0a0;font-size:12px;letter-spacing:.08em;margin-top:24px;line-height:1.6}
+.trustpay-system{margin:48px 0 64px;padding:32px;background:#121212;border:1px solid #404040}
+.trustpay-system-heading{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:32px}
+.trustpay-system-heading h2{font-size:24px;line-height:1.3;font-weight:400;margin:0}
+.trustpay-system-heading>span,.trustpay-flow li>span{font-size:12px;line-height:1.6;color:#b8b8b8;letter-spacing:.04em}
+.trustpay-flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;list-style:none;padding:0;margin:0}
+.trustpay-flow li{border-top:1px solid #707070;padding-top:16px}
+.trustpay-flow strong{display:block;font-size:18px;font-weight:400;line-height:1.4;margin:12px 0}
+.trustpay-flow p,.trustpay-system-note{font-size:14px;line-height:1.6;color:#b8b8b8;margin:0;max-width:68ch}
+.trustpay-system-note{margin-top:32px}
+.trustpay-checks{padding-left:24px;margin:0 0 32px;max-width:68ch;font-size:16px;line-height:1.6}
+.trustpay-checks li+li{margin-top:12px}
+.trustpay-code{padding:24px;background:#121212;border:1px solid #404040;overflow:auto;font-size:14px;line-height:1.7;margin:0 0 24px;max-width:100%;white-space:pre}
+.case-content{min-width:0}
+@media(max-width:1000px){.trustpay-flow{grid-template-columns:repeat(2,minmax(0,1fr))}.trustpay-system-heading{display:block}.trustpay-system-heading>span{display:block;margin-top:16px}}
+@media(max-width:600px){.trustpay-system{padding:24px;margin:32px 0 48px}.trustpay-flow{grid-template-columns:1fr;gap:32px}.trustpay-code{font-size:12px;padding:16px}.trustpay-system-heading h2{font-size:20px}}
