@@ -25,6 +25,7 @@ const projectPreviewImages = {
   fundlife: ['./assets/projects/fundlife-workspace.png'],
   base: ['./assets/projects/base-library-desktop.png'],
   biodiscovery: ['./assets/projects/biodiscovery-desktop.jpg'],
+  trustpay: ['./assets/work-hover/trustpay-preview.png'],
 };
 
 let activePreviewEntry = null;
