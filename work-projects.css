@@ -48,3 +48,33 @@
   .work-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; }
   .works-group-label { padding: 32px 0 0; }
 }
+
+/* Desktop: the project image sits in its own column; hover cycles through the project's screens. */
+.work-thumb-side { display: none; }
+@media (min-width: 901px) {
+  .work-entry { grid-template-columns: 6.5% minmax(0, 1fr) minmax(0, 33%) 15%; }
+  .work-copy { padding-right: 48px; }
+  .work-thumb-side {
+    display: block;
+    grid-column: 3;
+    grid-row: 1;
+    align-self: center;
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    background: #050505;
+    outline: 1px solid var(--line);
+  }
+  .work-thumb-side img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 600ms cubic-bezier(.2, .8, .2, 1), opacity 220ms ease;
+  }
+  .work-thumb-side.is-portrait img { object-fit: contain; }
+  .work-entry-preview.is-hovered .work-thumb-side img { transform: scale(1.025); }
+  .work-entry-preview.is-hovered .work-thumb-side { outline-color: rgba(255, 255, 255, .6); }
+  .work-links { grid-column: 4; grid-row: 1; }
+  .work-floating-preview { display: none; }
+}

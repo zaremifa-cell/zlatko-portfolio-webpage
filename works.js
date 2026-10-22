@@ -148,6 +148,39 @@ function requestHoverFrame() {
   if (!frameId) frameId = window.requestAnimationFrame(animateHover);
 }
 
+
+// Desktop side images: while hovering, step through the project's own screens inside its image column.
+const sideCycleProjects = { ableton: abletonPreviewImages, pardon: pardonPreviewImages };
+let sideCycleTimer = 0;
+
+function stopSideCycle(entry) {
+  window.clearTimeout(sideCycleTimer);
+  sideCycleTimer = 0;
+  const thumb = entry.querySelector('.work-thumb-side');
+  const img = thumb?.querySelector('img');
+  if (!img || !img.dataset.original) return;
+  img.src = img.dataset.original;
+  thumb.classList.remove('is-portrait');
+}
+
+function startSideCycle(entry) {
+  const thumb = entry.querySelector('.work-thumb-side');
+  const img = thumb?.querySelector('img');
+  const frames = sideCycleProjects[entry.dataset.previewProject];
+  if (!img || !frames || !window.matchMedia('(min-width: 901px)').matches) return;
+  img.dataset.original = img.dataset.original || img.getAttribute('src');
+  const sequence = [img.dataset.original, ...frames];
+  let index = 0;
+  const step = () => {
+    index = (index + 1) % sequence.length;
+    img.src = sequence[index];
+    thumb.classList.toggle('is-portrait', entry.dataset.previewProject === 'pardon' && index > 0);
+    sideCycleTimer = window.setTimeout(step, entry.dataset.previewProject === 'pardon' ? 900 : 1300);
+  };
+  window.clearTimeout(sideCycleTimer);
+  sideCycleTimer = window.setTimeout(step, 700);
+}
+
 if (previewEntries.length && floatingPreview && floatingPreviewImage) {
   Object.values(projectPreviewImages).flat().forEach((src) => {
     const image = new Image();
@@ -157,6 +190,7 @@ if (previewEntries.length && floatingPreview && floatingPreviewImage) {
   previewEntries.forEach((entry) => {
     entry.addEventListener('pointerenter', (event) => {
       if (window.matchMedia('(max-width: 620px)').matches) return;
+      startSideCycle(entry);
 
       activePreviewEntry = entry;
       activeProject = entry.dataset.previewProject;
@@ -197,6 +231,7 @@ if (previewEntries.length && floatingPreview && floatingPreviewImage) {
 
       isHoveringPreview = false;
       isSuspendedForLink = false;
+      stopSideCycle(entry);
       hideHoverEffect();
       requestHoverFrame();
     });
