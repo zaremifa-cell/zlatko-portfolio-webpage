@@ -1,0 +1,26 @@
+/* kubesieve case study — extends engineering-projects.css with the same 4-point scale. */
+.ks-label{color:#a0a0a0;font-size:12px;letter-spacing:.08em;margin-top:24px;line-height:1.6}
+.ks-system{margin:48px 0 64px;padding:32px;background:#121212;border:1px solid #404040}
+.ks-system-heading{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:32px}
+.ks-system-heading h2{font-size:24px;line-height:1.3;font-weight:400;margin:0}
+.ks-system-heading>span,.ks-flow li>span{font-size:12px;line-height:1.6;color:#b8b8b8;letter-spacing:.04em}
+.ks-flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;list-style:none;padding:0;margin:0}
+.ks-flow li{border-top:1px solid #707070;padding-top:16px}
+.ks-flow strong{display:block;font-size:18px;font-weight:400;line-height:1.4;margin:12px 0}
+.ks-flow p,.ks-system-note{font-size:14px;line-height:1.6;color:#b8b8b8;margin:0;max-width:68ch}
+.ks-system-note{margin-top:32px}
+.ks-terminal{margin:0 0 64px;border:1px solid #404040;background:#0a0a0a}
+.ks-terminal pre{margin:0;padding:24px;overflow:auto;font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;font-size:13px;line-height:1.7;color:#d8d8d8;white-space:pre}
+.ks-terminal .sev{color:#fff;font-weight:700}
+.ks-terminal .dim{color:#8a8a8a}
+.ks-terminal figcaption{padding:16px 24px;border-top:1px solid #404040;color:#a0a0a0;font-size:12px;line-height:1.6}
+.ks-checks{padding-left:24px;margin:0 0 32px;max-width:68ch;font-size:16px;line-height:1.6}
+.ks-checks li+li{margin-top:12px}
+.ks-checks code,.case-content p code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;font-size:.875em;color:#e8e8e8}
+.ks-rules{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:0 0 32px;padding:0;list-style:none;max-width:96ch}
+.ks-rules li{border-top:1px solid #404040;padding-top:12px;font-size:14px;line-height:1.6;color:#b8b8b8}
+.ks-rules strong{display:block;color:#f2f2f2;font-weight:400;font-size:16px;margin-bottom:8px}
+.ks-code{padding:24px;background:#121212;border:1px solid #404040;overflow:auto;font-size:14px;line-height:1.7;margin:0 0 24px;max-width:100%;white-space:pre}
+.case-content{min-width:0}
+@media(max-width:1000px){.ks-flow{grid-template-columns:repeat(2,minmax(0,1fr))}.ks-rules{grid-template-columns:repeat(2,minmax(0,1fr))}.ks-system-heading{display:block}.ks-system-heading>span{display:block;margin-top:16px}}
+@media(max-width:600px){.ks-system{padding:24px;margin:32px 0 48px}.ks-flow,.ks-rules{grid-template-columns:1fr;gap:32px}.ks-code{font-size:12px;padding:16px}.ks-terminal pre{font-size:12px;padding:16px}.ks-terminal{margin-bottom:48px}.ks-system-heading h2{font-size:20px}}

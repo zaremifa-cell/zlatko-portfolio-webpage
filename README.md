@@ -1,6 +1,6 @@
 # Zlatko Anastasov — Design & Frontend Portfolio
 
-A personal portfolio presenting interface design and frontend implementation through six projects: **AbletonR**, **Pardon**, **FundLife AI**, **Base AI Visual Library** **BioDiscovery Workbench** and **TrustPay**.
+A personal portfolio presenting interface design and frontend implementation through seven projects: **AbletonR**, **Pardon**, **FundLife AI**, **Base AI Visual Library**, **BioDiscovery Workbench**, **TrustPay** and **kubesieve**.
 
 **[Visit the portfolio](https://zlatko-anastasov-portfolio.vercel.app)** · [Selected work](https://zlatko-anastasov-portfolio.vercel.app/works.html) · [About & résumé](https://zlatko-anastasov-portfolio.vercel.app/information.html)
 
@@ -19,6 +19,8 @@ The homepage's animated canvas is one part of the portfolio; the site also inclu
 | FundLife AI | Document-review interaction design | [Case study](https://zlatko-anastasov-portfolio.vercel.app/fundlife.html) | Figma prototype linked from case study |
 | Base AI Visual Library | Semantic and visual search; browser-based inference | [Case study](https://zlatko-anastasov-portfolio.vercel.app/base-ai.html) | Time-limited demo invitations |
 | BioDiscovery Workbench | Scientific data integration and controlled AI workflow | [Live explorer](https://biodiscovery-workbench.vercel.app) · [Case study](https://zlatko-anastasov-portfolio.vercel.app/biodiscovery.html) | GPU inference in preparation |
+| TrustPay | Java payment backend; idempotency, ledger and recovery | [Live demo](https://trustpay-demo.vercel.app) · [Case study](https://zlatko-anastasov-portfolio.vercel.app/trustpay.html) | [Repository](https://github.com/zaremifa-cell/trustpay-backend) |
+| kubesieve | Rust CLI that scans Kubernetes manifests for security misconfigurations | [Case study](https://zlatko-anastasov-portfolio.vercel.app/kubesieve.html) | [Repository](https://github.com/zaremifa-cell/kubesieve) |
 
 AbletonR is an independent portfolio concept, not an official Ableton product. Pardon is a native beta; installation and AI features depend on device, OS and TestFlight availability. See each project's README for its scope and requirements.
 
@@ -44,6 +46,7 @@ works.html / works.css / works.js Selected projects and previews
 information.html / .css / .js     Background, contact links and résumé
 abletonr.html / pardon.html       Original product case studies
 fundlife.html / base-ai.html / biodiscovery.html Additional project case studies
+trustpay.html / kubesieve.html   Engineering case studies (Java backend, Rust CLI)
 project.css / project.js          Shared case-study styles and behavior
 shared-ui.css                    Shared interface styles
 assets/                          Screenshots, graphics and résumé PDF
