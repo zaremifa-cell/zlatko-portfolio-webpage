@@ -28,6 +28,7 @@ const projectPreviewImages = {
   trustpay: ['./assets/work-hover/trustpay-preview.png'],
   kubesieve: ['./assets/work-hover/kubesieve-preview.png'],
   boomerang: ['./assets/work-hover/boomerang-preview.png'],
+  stockroom: ['./assets/work-hover/stockroom-preview.png'],
 };
 
 let activePreviewEntry = null;
