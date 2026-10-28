@@ -30,6 +30,7 @@ const projectPreviewImages = {
   boomerang: ['./assets/work-hover/boomerang-preview.png'],
   stockroom: ['./assets/work-hover/stockroom-preview.png'],
   pulse: ['./assets/work-hover/pulse-preview.png'],
+  tally: ['./assets/work-hover/tally-preview.png'],
 };
 
 let activePreviewEntry = null;

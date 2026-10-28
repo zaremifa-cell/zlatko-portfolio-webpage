@@ -1,6 +1,6 @@
 # Zlatko Anastasov — Design & Frontend Portfolio
 
-A personal portfolio presenting interface design and frontend implementation through ten projects: **AbletonR**, **Pardon**, **FundLife AI**, **Base AI Visual Library**, **BioDiscovery Workbench**, **TrustPay**, **kubesieve**, **Boomerang**, **Stockroom** and **Pulse**.
+A personal portfolio presenting interface design and frontend implementation through eleven projects: **AbletonR**, **Pardon**, **FundLife AI**, **Base AI Visual Library**, **BioDiscovery Workbench**, **TrustPay**, **kubesieve**, **Boomerang**, **Stockroom**, **Pulse** and **Tally**.
 
 **[Visit the portfolio](https://zlatko-anastasov-portfolio.vercel.app)** · [Selected work](https://zlatko-anastasov-portfolio.vercel.app/works.html) · [About & résumé](https://zlatko-anastasov-portfolio.vercel.app/information.html)
 
@@ -24,6 +24,7 @@ The homepage's animated canvas is one part of the portfolio; the site also inclu
 | Boomerang | Ruby on Rails returns platform; idempotent returns, carrier retries, signed webhooks | [Live demo](https://boomerang-returns.onrender.com) · [Case study](https://zlatko-anastasov-portfolio.vercel.app/boomerang.html) | [Repository](https://github.com/zaremifa-cell/boomerang-returns) |
 | Stockroom | Laravel + Vue inventory across warehouses; row locks, idempotent orders, CSV price import | [Live demo](https://stockroom-w30t.onrender.com) · [Case study](https://zlatko-anastasov-portfolio.vercel.app/stockroom.html) | [Repository](https://github.com/zaremifa-cell/stockroom) |
 | Pulse | Python + FastAPI uptime monitor; concurrent checks, honest incidents, SSRF protection | [Live demo](https://pulse-qrke.onrender.com) · [Case study](https://zlatko-anastasov-portfolio.vercel.app/pulse.html) | [Repository](https://github.com/zaremifa-cell/pulse) |
+| Tally | AI agent spend console concept; burn-up caps, anomaly detection, CLI view | [Live console](https://zlatko-anastasov-portfolio.vercel.app/tally/) · [Case study](https://zlatko-anastasov-portfolio.vercel.app/tally.html) | [Repository](https://github.com/zaremifa-cell/tally) |
 
 AbletonR is an independent portfolio concept, not an official Ableton product. Pardon is a native beta; installation and AI features depend on device, OS and TestFlight availability. See each project's README for its scope and requirements.
 
