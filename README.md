@@ -1,6 +1,6 @@
 # Zlatko Anastasov — Design & Frontend Portfolio
 
-A personal portfolio presenting interface design and frontend implementation through nine projects: **AbletonR**, **Pardon**, **FundLife AI**, **Base AI Visual Library**, **BioDiscovery Workbench**, **TrustPay**, **kubesieve**, **Boomerang** and **Stockroom**.
+A personal portfolio presenting interface design and frontend implementation through ten projects: **AbletonR**, **Pardon**, **FundLife AI**, **Base AI Visual Library**, **BioDiscovery Workbench**, **TrustPay**, **kubesieve**, **Boomerang**, **Stockroom** and **Pulse**.
 
 **[Visit the portfolio](https://zlatko-anastasov-portfolio.vercel.app)** · [Selected work](https://zlatko-anastasov-portfolio.vercel.app/works.html) · [About & résumé](https://zlatko-anastasov-portfolio.vercel.app/information.html)
 
@@ -23,6 +23,7 @@ The homepage's animated canvas is one part of the portfolio; the site also inclu
 | kubesieve | Rust CLI that scans Kubernetes manifests for security misconfigurations | [Case study](https://zlatko-anastasov-portfolio.vercel.app/kubesieve.html) | [Repository](https://github.com/zaremifa-cell/kubesieve) |
 | Boomerang | Ruby on Rails returns platform; idempotent returns, carrier retries, signed webhooks | [Live demo](https://boomerang-returns.onrender.com) · [Case study](https://zlatko-anastasov-portfolio.vercel.app/boomerang.html) | [Repository](https://github.com/zaremifa-cell/boomerang-returns) |
 | Stockroom | Laravel + Vue inventory across warehouses; row locks, idempotent orders, CSV price import | [Live demo](https://stockroom-w30t.onrender.com) · [Case study](https://zlatko-anastasov-portfolio.vercel.app/stockroom.html) | [Repository](https://github.com/zaremifa-cell/stockroom) |
+| Pulse | Python + FastAPI uptime monitor; concurrent checks, honest incidents, SSRF protection | [Live demo](https://pulse-qrke.onrender.com) · [Case study](https://zlatko-anastasov-portfolio.vercel.app/pulse.html) | [Repository](https://github.com/zaremifa-cell/pulse) |
 
 AbletonR is an independent portfolio concept, not an official Ableton product. Pardon is a native beta; installation and AI features depend on device, OS and TestFlight availability. See each project's README for its scope and requirements.
 
@@ -48,7 +49,7 @@ works.html / works.css / works.js Selected projects and previews
 information.html / .css / .js     Background, contact links and résumé
 abletonr.html / pardon.html       Original product case studies
 fundlife.html / base-ai.html / biodiscovery.html Additional project case studies
-trustpay.html / kubesieve.html / boomerang.html / stockroom.html   Engineering case studies (Java, Rust, Rails, Laravel)
+trustpay.html / kubesieve.html / boomerang.html / stockroom.html / pulse.html   Engineering case studies (Java, Rust, Rails, Laravel, Python)
 project.css / project.js          Shared case-study styles and behavior
 shared-ui.css                    Shared interface styles
 assets/                          Screenshots, graphics and résumé PDF

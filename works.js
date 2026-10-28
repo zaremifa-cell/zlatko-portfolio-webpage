@@ -29,6 +29,7 @@ const projectPreviewImages = {
   kubesieve: ['./assets/work-hover/kubesieve-preview.png'],
   boomerang: ['./assets/work-hover/boomerang-preview.png'],
   stockroom: ['./assets/work-hover/stockroom-preview.png'],
+  pulse: ['./assets/work-hover/pulse-preview.png'],
 };
 
 let activePreviewEntry = null;
