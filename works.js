@@ -27,6 +27,7 @@ const projectPreviewImages = {
   biodiscovery: ['./assets/projects/biodiscovery-desktop.jpg'],
   trustpay: ['./assets/work-hover/trustpay-preview.png'],
   kubesieve: ['./assets/work-hover/kubesieve-preview.png'],
+  boomerang: ['./assets/work-hover/boomerang-preview.png'],
 };
 
 let activePreviewEntry = null;
