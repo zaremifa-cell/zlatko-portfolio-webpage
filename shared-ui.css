@@ -227,3 +227,18 @@
     transition-duration: 0.01ms;
   }
 }
+
+/* Status line under links to demos on sleeping free hosting (see wake.js). */
+.demo-note {
+  display: block;
+  max-width: 44ch;
+  margin-top: 12px;
+  color: #9a9a9a;
+  font: 400 12px/1.5 "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.demo-note::before { content: "○ "; }
+.demo-note[data-state="ready"] { color: #f2f2f2; }
+.demo-note[data-state="ready"]::before { content: "● "; }
+.work-links .demo-note { margin-top: -12px; }
